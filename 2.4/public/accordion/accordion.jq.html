@@ -1,0 +1,57 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script src="./accordion.jq.js"></script>
+
+        <style>
+            #accordion {
+                background-color: #eee;
+                padding: 5px;
+            }
+            
+            .accordion .accordion-header {
+                font-size: 18px;
+                cursor: pointer;
+                background-color: #999;
+                color: white;
+                padding: 5px;
+                margin-top: 1px;
+                margin-bottom: 1px;
+            }
+            
+            .accordion .accordion-panel {
+                padding: 3px;
+                display:none;
+            }
+
+            .accordion .accordion-panel[data-active="true"] {
+                display:block;
+            }            
+        </style>
+    </head>
+    <body>
+        <div id="accordion">
+            <h3>Item 1</h3>
+            <div>
+                This is the content for the first item. It can contain just about any markup.
+                <ul>
+                    <li>Like this list!</li>
+                </ul>
+            </div>
+            
+            <h3>Item 2</h3>
+            <div>
+                This is the description for Item 2.
+            </div>
+            
+            <h3>Item 3</h3>
+            <div>
+                This is the description for Item 3.
+            </div>
+        </div>
+        <script>
+            var acc = $("#accordion").accordion();
+        </script>
+    </body>
+</html>

@@ -1,0 +1,63 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+        <script src="./accordion.vue.js"></script>
+
+        <style>
+            #app {
+                background-color: #eee;
+                padding: 5px;
+            }
+            
+            .accordion .accordion-header {
+                font-size: 18px;
+                cursor: pointer;
+                background-color: #999;
+                color: white;
+                padding: 5px;
+                margin-top: 1px;
+                margin-bottom: 1px;
+            }
+            
+            .accordion .accordion-panel {
+                padding: 3px;
+                
+            }           
+        </style>
+    </head>
+    <body>
+        <div id="app" class="accordion">
+            <accordion title="Item 1">
+                This is the content for the first item. It can contain just about any markup.
+                <ul>
+                    <li>Like this list!</li>
+                </ul>
+            </accordion>
+            
+            <accordion title="Item 2">
+                This is the description for Item 2.
+            </accordion>
+        
+            <accordion title="Item 3">
+                This is the description for Item 3.
+            </accordion>
+
+
+            
+        </div>
+        <script type="text/x-template" id="accordion-template">
+            <div>
+                <h3 class="accordion-header" @click="toggle">{{ title }}</h3>
+                <div v-if="active" class="accordion-panel">
+                    <slot></slot>
+                </div>
+            </div>
+        </script>
+        <script>
+            new Vue({
+                el: '#app'
+            });
+        </script>
+    </body>
+</html>

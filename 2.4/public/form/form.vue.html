@@ -1,0 +1,42 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <style>
+        .blue-bg {
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+            <form id="form" @submit.prevent="sendRequest">            
+                <div class="justify-content-md-center">
+                    <div class="form-group">
+                        <label for="email">Email</label> 
+                        <input class="form-control" type="email" id="email" name="email" v-model="email" value="" />
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea class="form-control" id="message" name="message" v-model="message"></textarea> 
+                    </div>
+                    <div class="form-group">
+                        <label for="color">Favorite Color</label>
+                        <select class="form-control" id="color" name="color" v-model="color">
+                            <option value="1">Blue</option>
+                            <option value="2">Red</option>
+                            <option value="3">Green</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <button class="btn btn-primary">Submit</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+    <script src="form.vue.js"></script>
+</body>
+</html>

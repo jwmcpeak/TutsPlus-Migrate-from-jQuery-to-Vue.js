@@ -1,0 +1,22 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <style>
+        .blue-bg {
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div id="text" @click="active = !active" :class="{'blue-bg': active}">
+        hello, world
+
+        <h1 v-if="active">HI</h1>
+    </div>
+
+    <script src="simple.vue.js"></script>
+</body>
+</html>
